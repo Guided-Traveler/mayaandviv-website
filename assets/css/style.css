@@ -365,22 +365,9 @@ p { max-width: 62ch; }
 .nav--solid .nav-cta {
   box-shadow: 0 6px 18px rgba(29, 167, 209, 0.28) !important;
 }
-/* arrow after the pill — needs higher specificity than .nav-links a::after
-   (which has content: "" for the underline bar) so the glyph actually renders */
-.nav-links a.nav-cta::after {
-  content: "→";
-  position: static;
-  inset: auto;
-  height: auto;
-  width: auto;
-  background: transparent;
-  font-family: var(--body);
-  font-weight: 700;
-  font-size: 1.05em;
-  transform: none;
-  transition: transform var(--t-base) var(--ease);
-}
-.nav-links a.nav-cta:hover::after { transform: translateX(4px); }
+/* kill .nav-links a::after's underline bar on the pill so it doesn't
+   occupy phantom space inside the flex row */
+.nav-links a.nav-cta::after { content: none; display: none; }
 
 /* drawer CTA group — eyebrow + CTA + phone row, mobile only */
 .nav-cta-group { list-style: none; display: contents; }
