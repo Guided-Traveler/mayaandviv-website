@@ -429,6 +429,13 @@ p { max-width: 62ch; }
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgba(10,31,46,0.55) 0%, rgba(10,31,46,0.55) 55%, rgba(10,31,46,0.82) 100%);
+  }
+}
+
 .hero-kicker {
   font-family: var(--body);
   font-weight: 700;
@@ -440,6 +447,7 @@ p { max-width: 62ch; }
   display: inline-flex;
   align-items: center;
   gap: var(--s-3);
+  text-shadow: 0 2px 14px rgba(10,31,46,0.85), 0 0 2px rgba(10,31,46,0.6);
 }
 .hero-kicker::before {
   content: "";
