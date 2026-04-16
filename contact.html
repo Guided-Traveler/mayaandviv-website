@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Plan Your Belize Trip | Maya &amp; Viv Adventures</title>
+  <meta name="description" content="Send Maya and Viv a message to plan your Belize tour. Snorkeling, Mayan ruins, zip lining, cave tubing — based in San Pedro, Belize." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..900,50..100;1,9..144,400..900,50..100&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Maya & Viv Adventures — Home">
+        <span>Maya</span><span class="amp">&amp;</span><span>Viv</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="https://wa.me/5016140507" class="btn btn-primary nav-cta">WhatsApp</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero" style="--hero-img: url('assets/images/gallery-10.jpg');">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Let's plan your <em>Belize</em>.</h1>
+      <p>Send us a note about the dates you're thinking, how many are coming, and what you're hoping to see. We'll write back within a day — usually sooner.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
+          <div>
+            <span class="eyebrow">Send a message</span>
+            <h2 style="margin-top: var(--s-4);">Tell us about your trip</h2>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-field">
+              <label for="date">Preferred date</label>
+              <input type="date" id="date" name="preferred_date" />
+            </div>
+            <div class="form-field">
+              <label for="group">Group size</label>
+              <input type="number" id="group" name="group_size" min="1" max="20" placeholder="2" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="tour">Tour you're interested in</label>
+            <select id="tour" name="tour_interest">
+              <option value="">Not sure yet — help me pick</option>
+              <option value="hol-chan">Hol Chan &amp; Shark Ray Alley (Snorkel)</option>
+              <option value="reef-expedition">Full-Day Reef Expedition (Snorkel)</option>
+              <option value="sunset-bonfire">Sunset Reef &amp; Beach Bonfire</option>
+              <option value="xunantunich">Xunantunich Temple Tour (Mainland)</option>
+              <option value="lamanai">Lamanai River &amp; Ruins (Mainland)</option>
+              <option value="cave-zipline">Cave Tubing &amp; Zip Line Combo</option>
+              <option value="custom">A custom mix of the above</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" rows="5" placeholder="Kids coming along, dietary restrictions, special occasion, prior snorkel experience — anything helps."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-arrow" style="align-self: flex-start;">Send the note</button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <!-- INFO -->
+        <aside class="contact-info reveal" data-delay="1">
+          <div class="contact-info-block">
+            <h4>Faster, if you'd like</h4>
+            <p><a href="https://wa.me/5016140507">WhatsApp +501 614-0507</a></p>
+            <p style="color: var(--ink-soft); font-size: var(--step--1); margin-top: var(--s-3);">We usually answer within a few hours during island daylight.</p>
+          </div>
+
+          <div class="contact-info-block">
+            <h4>By phone</h4>
+            <p><a href="tel:+5016140507">+501 614-0507</a></p>
+          </div>
+
+          <div class="contact-info-block">
+            <h4>By email</h4>
+            <p><a href="mailto:mayaandvivadventures@gmail.com">mayaandvivadventures@gmail.com</a></p>
+          </div>
+
+          <div class="contact-info-block">
+            <h4>Find us</h4>
+            <p>Box 234 Barrier Reef Street Drive<br>San Pedro, Ambergris Caye<br>Belize</p>
+          </div>
+
+          <div class="contact-info-block">
+            <h4>Follow along</h4>
+            <div class="contact-social">
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.4-1.8 2-1.8h1.7V2.1C16.4 2 15.1 2 13.7 2 10.9 2 9 3.7 9 6.9V10H6v4h3v8h4z"/></svg></a>
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 2h-3v12.3a2.7 2.7 0 1 1-2.7-2.7c.2 0 .5 0 .7.1V8.6a6 6 0 1 0 5 5.9V9.3a7.1 7.1 0 0 0 4 1.2V7.5A4.1 4.1 0 0 1 16 2z"/></svg></a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- MAP -->
+      <div class="map-wrap reveal">
+        <iframe
+          title="Map of San Pedro, Ambergris Caye, Belize"
+          src="https://www.google.com/maps?q=San+Pedro+Ambergris+Caye+Belize&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <span class="footer-brand">Maya<span class="amp">&amp;</span>Viv</span>
+          <p class="footer-about">A mother-daughter tour company, running small-group snorkeling and mainland adventures out of San Pedro, Belize since 2016.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.4-1.8 2-1.8h1.7V2.1C16.4 2 15.1 2 13.7 2 10.9 2 9 3.7 9 6.9V10H6v4h3v8h4z"/></svg></a>
+            <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 2h-3v12.3a2.7 2.7 0 1 1-2.7-2.7c.2 0 .5 0 .7.1V8.6a6 6 0 1 0 5 5.9V9.3a7.1 7.1 0 0 0 4 1.2V7.5A4.1 4.1 0 0 1 16 2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tours</h4>
+          <ul class="footer-list">
+            <li><a href="tours.html#snorkel">Snorkeling</a></li>
+            <li><a href="tours.html#mainland">Mayan Ruins</a></li>
+            <li><a href="tours.html#mainland">Cave Tubing</a></li>
+            <li><a href="tours.html#mainland">Zip Lining</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>Box 234 Barrier Reef Street Drive,<br>San Pedro, Belize</p>
+          <p><a href="tel:+5016140507">+501 614-0507</a></p>
+          <p><a href="mailto:mayaandvivadventures@gmail.com">mayaandvivadventures@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Maya &amp; Viv Adventures. All rights reserved.</span>
+        <span>Made with salt air and jungle rain.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

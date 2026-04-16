@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.claude/skills/awesome-design)",
+      "Bash(mv ~/.claude/references/awesome-design-md/design-md ~/.claude/skills/awesome-design/design-md)",
+      "Bash(rm -rf ~/.claude/references/awesome-design-md /tmp/awesome-check)",
+      "Read(//Users/saxonfunk/.claude/skills/awesome-design/**)"
+    ]
+  }
+}
