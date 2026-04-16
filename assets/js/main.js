@@ -59,6 +59,32 @@
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* ---------- Sticky WhatsApp pill reveal ---------- */
+  const stickyWA = document.querySelector('.sticky-whatsapp');
+  const waBanner = document.querySelector('.whatsapp-banner');
+  if (stickyWA) {
+    if (waBanner && 'IntersectionObserver' in window) {
+      // Contact page: show once the banner has scrolled out of view
+      const bannerIO = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            stickyWA.classList.toggle('is-visible', !entry.isIntersecting);
+          });
+        },
+        { threshold: 0, rootMargin: '-80px 0px 0px 0px' }
+      );
+      bannerIO.observe(waBanner);
+    } else {
+      // Other pages: show after scrolling past a threshold
+      const threshold = 400;
+      const toggleOnScroll = () => {
+        stickyWA.classList.toggle('is-visible', window.scrollY > threshold);
+      };
+      toggleOnScroll();
+      window.addEventListener('scroll', toggleOnScroll, { passive: true });
+    }
+  }
+
   /* ---------- Contact form (Formspree-compatible) ---------- */
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
