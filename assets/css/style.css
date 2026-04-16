@@ -40,20 +40,20 @@ input, textarea, select {
 
 /* ---------- Design tokens ---------- */
 :root {
-  /* palette */
-  --ink: #0E1B22;
-  --ink-soft: #32454F;
-  --sand: #FBF7F0;
-  --sand-deep: #F1EADB;
-  --blue-deep: #0B4F6C;
-  --blue-mid: #1B98B8;
+  /* palette — brand: deep ocean blue, caribbean cyan, jungle green, pure white */
+  --ink: #0B1F2E;
+  --ink-soft: #3A5060;
+  --sand: #FFFFFF;
+  --sand-deep: #EEF6FA;
+  --blue-deep: #0A3E5C;
+  --blue-mid: #1DA7D1;
   --blue-pale: #CFE9F1;
-  --green: #2E5D3A;
-  --green-mid: #4F8659;
-  --coral: #FF6B47;
-  --coral-deep: #E54F2C;
+  --green: #2E7D4A;
+  --green-mid: #4AA566;
+  --coral: #1DA7D1;
+  --coral-deep: #0E8DB3;
   --white: #FFFFFF;
-  --line: rgba(14, 27, 34, 0.08);
+  --line: rgba(10, 62, 92, 0.1);
 
   /* typography */
   --display: "Fraunces", "Times New Roman", serif;
@@ -207,11 +207,11 @@ p { max-width: 62ch; }
 .btn-primary {
   background: var(--coral);
   color: var(--white);
-  box-shadow: 0 8px 24px rgba(255, 107, 71, 0.32);
+  box-shadow: 0 8px 24px rgba(29, 167, 209, 0.32);
 }
 .btn-primary:hover {
   background: var(--coral-deep);
-  box-shadow: 0 12px 32px rgba(229, 79, 44, 0.4);
+  box-shadow: 0 12px 32px rgba(14, 141, 179, 0.45);
 }
 
 .btn-ghost {
@@ -659,7 +659,7 @@ p { max-width: 62ch; }
   border-radius: var(--r-pill);
   font-weight: 700;
   font-size: var(--step-0);
-  box-shadow: 0 8px 20px rgba(255,107,71,0.35);
+  box-shadow: 0 8px 20px rgba(29,167,209,0.35);
 }
 .tour-card-price small {
   font-size: var(--step--2);
@@ -998,7 +998,7 @@ p { max-width: 62ch; }
   position: absolute;
   width: 220px; height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,107,71,0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(29,167,209,0.35), transparent 70%);
   right: -40px; top: -40px;
   pointer-events: none;
 }
@@ -1208,9 +1208,9 @@ p { max-width: 62ch; }
 }
 .form-status[data-state="error"] {
   display: block;
-  background: rgba(229,79,44,0.08);
-  color: var(--coral-deep);
-  border-left: 3px solid var(--coral-deep);
+  background: rgba(217,76,76,0.08);
+  color: #B83232;
+  border-left: 3px solid #B83232;
 }
 
 .contact-info {
