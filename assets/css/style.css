@@ -342,6 +342,11 @@ p { max-width: 62ch; }
   text-transform: uppercase;
 }
 
+/* drawer CTA group — eyebrow + CTA + phone row, mobile only */
+.nav-cta-group { list-style: none; display: contents; }
+.nav-cta-eyebrow,
+.nav-cta-meta { display: none; }
+
 .nav-toggle {
   display: none;
   width: 40px; height: 40px;
@@ -389,8 +394,8 @@ p { max-width: 62ch; }
     height: calc(100dvh - var(--header-h));
     flex-direction: column;
     background: var(--sand);
-    padding: var(--s-8) var(--s-6);
-    gap: var(--s-6);
+    padding: var(--s-7) var(--s-6) 0;
+    gap: var(--s-5);
     align-items: flex-start;
     transform: translateX(100%);
     transition: transform var(--t-base) var(--ease);
@@ -399,15 +404,95 @@ p { max-width: 62ch; }
     overflow-y: auto;
   }
   .nav-links[data-open="true"] { transform: translateX(0); }
-  .nav-links a {
+  .nav-links > li > a {
     color: var(--ink);
-    font-size: var(--step-2);
+    font-size: var(--step-3);
     font-family: var(--display);
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     text-transform: none;
+    text-shadow: none;
   }
-  .nav-cta { align-self: flex-start; margin-top: var(--s-4); }
+
+  /* drawer footer: eyebrow + pill + phone row */
+  .nav-cta-group {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--s-3);
+    width: 100%;
+    margin-top: auto;
+    padding: var(--s-5) 0 calc(var(--s-6) + env(safe-area-inset-bottom));
+    border-top: 1px solid rgba(11,31,46,0.08);
+  }
+  .nav-cta-eyebrow {
+    display: block;
+    font-family: var(--body);
+    font-size: var(--step--2);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(11,31,46,0.55);
+    margin-bottom: var(--s-1);
+  }
+  .nav-cta {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--s-2);
+    padding: 18px 24px !important;
+    font-family: var(--body) !important;
+    font-size: var(--step-0) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--white) !important;
+    background: var(--coral);
+    border-radius: var(--r-pill);
+    box-shadow: 0 10px 30px -10px rgba(29,167,209,0.6), inset 0 1px 0 rgba(255,255,255,0.2);
+    margin-top: 0 !important;
+    align-self: stretch !important;
+  }
+  .nav-cta::after {
+    content: "→";
+    font-family: var(--body);
+    transition: transform var(--t-base) var(--ease);
+  }
+  .nav-cta:hover::after { transform: translateX(4px); }
+  .nav-cta-meta {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-3);
+    margin-top: var(--s-2);
+    font-family: var(--body);
+  }
+  .nav-cta-phone {
+    font-size: var(--step-0) !important;
+    font-family: var(--body) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: var(--ink) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-cta-phone::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>") center/contain no-repeat;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>") center/contain no-repeat;
+  }
+  .nav-cta-reassure {
+    font-size: var(--step--1);
+    color: rgba(11,31,46,0.55);
+    font-weight: 500;
+  }
 }
 
 /* ---------- Hero ---------- */
