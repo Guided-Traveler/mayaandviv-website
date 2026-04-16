@@ -297,8 +297,6 @@ p { max-width: 62ch; }
   padding: 0; margin: 0;
   align-items: center;
 }
-/* separate the CTA cluster from the text links */
-.nav-links > li:has(> .nav-cta) { margin-left: var(--s-4); }
 
 .nav-links a {
   font-size: var(--step--1);
