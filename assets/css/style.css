@@ -403,17 +403,11 @@ p { max-width: 62ch; }
   color: var(--white);
   overflow: hidden;
   isolation: isolate;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  background-color: var(--blue-deep);
   background-image: var(--hero-img, linear-gradient(135deg, var(--blue-deep), var(--blue-mid)));
   background-size: cover;
   background-position: center;
-  z-index: -2;
-  transform: scale(1.04);
+  background-repeat: no-repeat;
 }
 
 .hero::after {
@@ -421,8 +415,8 @@ p { max-width: 62ch; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10,62,92,0.05) 0%, rgba(10,62,92,0.25) 55%, rgba(10,31,46,0.65) 100%),
-    linear-gradient(90deg, rgba(10,31,46,0.55) 0%, rgba(10,31,46,0.1) 45%, rgba(10,31,46,0) 70%);
+    linear-gradient(180deg, rgba(10,62,92,0.1) 0%, rgba(10,62,92,0.2) 55%, rgba(10,31,46,0.55) 100%),
+    linear-gradient(90deg, rgba(10,31,46,0.6) 0%, rgba(10,31,46,0.15) 45%, rgba(10,31,46,0) 70%);
   z-index: -1;
 }
 
@@ -507,16 +501,11 @@ p { max-width: 62ch; }
   color: var(--white);
   overflow: hidden;
   isolation: isolate;
-}
-
-.page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  background-color: var(--blue-deep);
   background-image: var(--hero-img, linear-gradient(135deg, var(--blue-deep), var(--blue-mid)));
   background-size: cover;
   background-position: center;
-  z-index: -2;
+  background-repeat: no-repeat;
 }
 
 .page-hero::after {
@@ -838,14 +827,11 @@ p { max-width: 62ch; }
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-}
-
-.cta-banner::before {
-  content: "";
-  position: absolute; inset: 0;
+  background-color: var(--blue-deep);
   background-image: var(--cta-img, linear-gradient(135deg, var(--blue-deep), var(--green)));
-  background-size: cover; background-position: center;
-  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cta-banner::after {
